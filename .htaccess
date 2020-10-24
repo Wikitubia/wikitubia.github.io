@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule ^(.\*)$ https://youtube.fandom.com/wiki/$1 [L,R=301]
