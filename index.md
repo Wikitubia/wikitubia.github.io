@@ -1,1 +1,10 @@
-This is a test page
+		<!DOCTYPE html>
+    <html>
+      <head>
+    <title>Wikitubia</title>
+    
+    <script>
+			window.location.replace("https://youtube.fandom.com/wiki/");
+		</script>
+      </head>
+     </html>
