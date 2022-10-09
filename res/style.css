@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: 'Rubik';
-    src: url('res/Rubik-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Rubik';
+  src: url('res/Rubik-VariableFont_wght.ttf') format('truetype');
 }
 
 html,
@@ -15,10 +15,21 @@ body {
 }
 
 @keyframes bg-anim {
-  0% {background-position: 0 0;}
-  25% {background-position: 50% 0;}
-  50% {background-position: 50% 50%;}
-  75% {background-position: 0 50%;}
+  0% {
+    background-position: 0 0;
+  }
+
+  25% {
+    background-position: 50% 0;
+  }
+
+  50% {
+    background-position: 50% 50%;
+  }
+
+  75% {
+    background-position: 0 50%;
+  }
 }
 
 body {
@@ -50,4 +61,35 @@ div#main {
   background-color: rgba(255, 0, 0, .1);
   padding: 7.5%;
   border-radius: 8px;
+}
+
+a {
+  color: #3ea6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #8e3eff;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: black;
+    background-size: cover;
+    background-image: url('https://static.wikia.nocookie.net/youtube/images/0/08/Site-background-light/revision/latest');
+  }
+
+  a {
+    filter: invert(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
 }
