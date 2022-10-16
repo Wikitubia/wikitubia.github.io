@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('res/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+@keyframes bg-anim {
+  0% {
+    background-position: 0 0;
+  }
+
+  25% {
+    background-position: 50% 0;
+  }
+
+  50% {
+    background-position: 50% 50%;
+  }
+
+  75% {
+    background-position: 0 50%;
+  }
+}
+
+body {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('https://static.wikia.nocookie.net/youtube/images/0/08/Site-background-dark/revision/latest');
+  animation: bg-anim 90s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 100px black;
+}
+
+h1 {
+  font-size: 300%;
+  font-weight: 900;
+  font-family: 'Rubik', sans-serif;
+}
+
+hr {
+  background-color: red;
+  border: 0;
+  height: .25em;
+  width: 25%;
+}
+
+div#main {
+  background-color: rgba(255, 0, 0, .1);
+  padding: 7.5%;
+  border-radius: 8px;
+}
+
+a {
+  color: #3ea6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #8e3eff;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: black;
+    background-size: cover;
+    background-image: url('https://static.wikia.nocookie.net/youtube/images/b/b5/Site-background-light/revision/latest');
+  }
+
+  a {
+    filter: invert(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}
