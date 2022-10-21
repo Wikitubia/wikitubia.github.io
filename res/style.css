@@ -39,6 +39,7 @@ body {
   justify-content: center;
   text-align: center;
   background: url('dark.png');
+  background-size: 150%;
   animation: bg-anim 90s ease-in-out infinite;
   backdrop-filter: blur(10px);
   box-shadow: inset 0 0 100px black;
@@ -79,7 +80,6 @@ a:visited {
 @media (prefers-color-scheme: light) {
   body {
     color: black;
-    background-size: cover;
     background-image: url('light.png');
   }
 
