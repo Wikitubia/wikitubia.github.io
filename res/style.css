@@ -81,6 +81,10 @@ div#main {
   padding-block: 5%;
 }
 
+#hero img {
+  width: 15%;
+}
+
 img:hover {
   animation: speen 2.5s ease-in-out;
 }
@@ -140,5 +144,54 @@ a:visited {
 @media (prefers-reduced-motion: reduce) {
   body {
     animation: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-size: 350%;
+  }
+
+  #hero img {
+    width: 25%;
+  }
+
+  div#main {
+    grid-template-columns: auto;
+    height: 75%;
+    grid-template-rows: 1fr;
+  }
+
+  div#main > section {
+    border-block: 1px solid red;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  #hero {
+    flex-direction: column;
+  }
+
+  #title {
+    width: 95%;
+  }
+
+  #title > * {
+    margin-block: 4vw;
+    line-height: 1.5;
+  }
+
+  #featured {
+    border: 0;
+  }
+
+  a {
+    padding: 2%;
+  }
+
+  #featured {
+    display: none;
   }
 }
