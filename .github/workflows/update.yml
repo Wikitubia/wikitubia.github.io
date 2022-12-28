@@ -1,4 +1,4 @@
-name: update-article-cout
+name: update-article-count
 on:
   push:
     branches: ["main"]
