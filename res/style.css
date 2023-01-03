@@ -6,7 +6,14 @@
 
 @font-face {
   font-family: "Rubik";
-  src: url("Rubik-VariableFont_wght.ttf") format("truetype");
+  src: local(),
+  url("rubik.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local(),
+  url("open-sans.woff2") format("woff2");
 }
 
 html,
@@ -49,6 +56,7 @@ body {
   animation: bg-anim 90s ease-in-out infinite;
   backdrop-filter: blur(0.5vw);
   box-shadow: inset 0 0 5vw black;
+  font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
 h1 {
