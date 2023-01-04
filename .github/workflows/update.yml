@@ -18,7 +18,7 @@ jobs:
           echo "$GITHUB_WORKSPACE" && cd "$GITHUB_WORKSPACE"
       - name: Fetch data from YTWiki's API
         run: |
-          int = curl 'https://youtube.fandom.com/api.php?action=query&format=json&meta=siteinfo&formatversion=latest&siprop=statistics' | jq --raw-output '.query.statistics.articles'
+          int=$(curl 'https://youtube.fandom.com/api.php?action=query&format=json&meta=siteinfo&formatversion=latest&siprop=statistics' | jq --raw-output '.query.statistics.articles')
           echo "{\"int\":$int}" > count.json
       - name: Commit change
         run: |
