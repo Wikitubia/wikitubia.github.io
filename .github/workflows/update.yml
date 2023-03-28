@@ -23,6 +23,6 @@ jobs:
       - name: Commit change
         run: |
           git add count.json
-          git commit -m "Fetched today's article count || echo 'Source is the same as repository. Skipping push..."
+          git commit -m "Fetched today's article count" || echo 'Source is the same as repository. Skipping push...'
           git push -u origin main || echo 'Source is the same as repository. Skipping push...'
           echo 'Job done!'; exit 0
