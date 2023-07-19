@@ -128,9 +128,6 @@ a {
 a:hover {
   box-shadow: none;
   filter: hue-rotate(180deg);
-}
-
-a:hover {
   text-decoration: underline;
 }
 
