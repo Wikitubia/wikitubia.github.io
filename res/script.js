@@ -1,4 +1,4 @@
-function main() {
+(function() {
   const a = 'https://youtube.fandom.com/api.php?action=query&format=json&meta=siteinfo&formatversion=latest&siprop=statistics';
   const sc = document.createElement('script');
 
@@ -10,6 +10,4 @@ function main() {
 
   sc.src = a + '&callback=handler';
   document.body.appendChild(sc);
-}
-
-main();
+})();
