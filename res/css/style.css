@@ -1,0 +1,146 @@
+:root {
+  --rubik-font-src: local(), url("/res/font/rubik.ttf") format("truetype");
+  --osans-font-src: local(), url("/res/font/open-sans.woff2") format("woff2");
+  --oswald-font-src: local(), url("/res/font/oswald.ttf");
+  --dark-bg-img: url("/res/img/dark.png");
+  --light-bg-img: url("/res/img/light.png");
+  --bgcolor: #272727;
+}
+
+@media (prefers-reduced-data: reduce) {
+  :root {
+    --dark-bg-img: #343434;
+    --light-bg-img: #bb1e1a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: var(--rubik-font-src);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: var(--osans-font-src);
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: var(--oswald-font-src);
+}
+
+@keyframes bg-anim {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+
+body {
+  color: white;
+  background: var(--dark-bg-img);
+  animation: bg-anim 120s linear infinite;
+  font-family: "Open Sans", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5%;
+  width: calc(100vw - 25%);
+  height: calc(100vh - 15%);
+
+  img {
+    width: 75%;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    background: var(--bgcolor);
+    padding: 1vw;
+    border-radius: 3px;
+
+    font-size: clamp(1em, 5vw, 2em);
+
+    .hover:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-family: "Oswald";
+      font-size: clamp(2em, 5vw, 3em);
+      line-height: 0.5;
+    }
+  }
+
+  section#left {
+    text-align: center;
+
+    #link {
+      margin-inline: auto;
+      background-color: #bb1e1a;
+      width: fit-content;
+      padding: 1vh;
+      margin-block: 2vh;
+    }
+  }
+
+  section#right {
+    align-items: center;
+
+    #articleCount {
+      font-weight: bold;
+      background-color: #bb1e1a;
+      padding: 1vh;
+      width: fit-content;
+    }
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-image: url("/res/img/light.png");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
+}
