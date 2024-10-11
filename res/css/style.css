@@ -4,7 +4,8 @@
   --oswald-font-src: local(), url("/res/font/oswald.ttf");
   --dark-bg-img: url("/res/img/dark.png");
   --light-bg-img: url("/res/img/light.png");
-  --bgcolor: #272727;
+  --bgcolor-dark: #272727;
+  --bgcolor-light: #e5e5e5;
 }
 
 @media (prefers-reduced-data: reduce) {
@@ -79,11 +80,15 @@ main {
     flex-direction: column;
     text-align: center;
 
-    background: var(--bgcolor);
+    background-color: var(--bgcolor-dark);
     padding: 1vw;
     border-radius: 3px;
 
     font-size: clamp(1em, 5vw, 2em);
+
+    .hover {
+      color: white;
+    }
 
     .hover:hover {
       text-decoration: underline;
@@ -129,6 +134,17 @@ a {
 @media (prefers-color-scheme: light) {
   body {
     background-image: url("/res/img/light.png");
+    color: black;
+  }
+
+  main {
+    img {
+      filter: invert(1) hue-rotate(180deg) saturate(50);
+    }
+
+    section {
+      background-color: var(--bgcolor-light);
+    }
   }
 }
 
