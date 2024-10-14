@@ -13,7 +13,7 @@ function populateArticleCount(cfg) {
     [ "meta", "siteinfo" ],
     [ "formatversion", "latest" ],
     [ "siprop", "statistics" ],
-    [ "origin", "wikitubia.github.io" ],
+    [ "origin", "*" ],
     [ "maxlag", "5" ]
   ]);
 
